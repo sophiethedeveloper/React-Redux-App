@@ -17,7 +17,7 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        quotes: action.payload,
+        quotes: [action.payload],
       };
 
     default:
