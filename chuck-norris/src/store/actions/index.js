@@ -8,7 +8,8 @@ export const fetchQuotes = (category) => (dispatch) => {
   axios
     .get(category)
     .then((res) => {
-      dispatch({ type: FETCH_QUOTES_SUCCESS, payload: res });
+      console.log(res.data)
+      dispatch({ type: FETCH_QUOTES_SUCCESS, payload: res.data });
     })
     .catch((err) => console.log(err));
 };
